@@ -6,7 +6,7 @@ import (
 )
 
 func ServidorJogador(w http.ResponseWriter, r *http.Request) {
-	jogador := r.URL.Path[len("/jogadores/")]
+	jogador := r.URL.Path[len("/jogadores/"):]
 
 	if jogador == "Maria" {
 		fmt.Fprint(w, "20")
